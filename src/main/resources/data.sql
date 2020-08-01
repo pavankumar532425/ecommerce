@@ -1,0 +1,1 @@
+insert into users(id,username,email,password,phonenumber,address) values (1,'pavan kumar','pavankumar532425@gmail.com','532425143','7989816992','jsadoinfdngkvdfgblfdgkdflgnlfdngldfnl')
