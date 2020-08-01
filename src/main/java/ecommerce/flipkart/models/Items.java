@@ -6,7 +6,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name='items')
+@Table(name="Items")
 public class Items {
     @Id
     @GeneratedValue
@@ -18,12 +18,12 @@ public class Items {
     int numberofitemsavailable;
     int Itemrating;
 
-    public int getItemreview() {
-        return Itemreview;
+    public int getItemrating() {
+        return Itemrating;
     }
 
-    public void setItemreview(int itemreview) {
-        Itemreview = itemreview;
+    public void setItemrating(int itemrating) {
+        Itemrating = itemrating;
     }
 
     public int getId() {

@@ -1,10 +1,12 @@
 package ecommerce.flipkart.models;
 
-public class OrderId {
-    int userId;
+import java.io.Serializable;
+
+public class OrderId implements Serializable {
+    String userId;
     int itemid;
 
-    public OrderId(int userId, int itemid) {
+    public OrderId(String userId, int itemid) {
         this.userId = userId;
         this.itemid = itemid;
     }

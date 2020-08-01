@@ -6,20 +6,20 @@ import javax.persistence.IdClass;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = 'rating')
+@Table(name = "rating")
 @IdClass(OrderId.class)
 public class rating {
     @Id
-    int userId;
+    String userId;
     @Id
     int itemid;
     int rating;
 
-    public int getUserId() {
+    public String getUserId() {
         return userId;
     }
 
-    public void setUserId(int userId) {
+    public void setUserId(String userId) {
         this.userId = userId;
     }
 

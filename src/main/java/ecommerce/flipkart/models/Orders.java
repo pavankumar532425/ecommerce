@@ -7,11 +7,11 @@ import javax.persistence.Table;
 import java.util.Date;
 
 @Entity
-@Table(name='orders')
+@Table(name="orders")
 @IdClass(OrderId.class)
 public class Orders {
     @Id
-    int userId;
+    String userId;
     @Id
     int itemid;
     Date orderplaceddata;
@@ -20,11 +20,11 @@ public class Orders {
     public Orders() {
     }
 
-    public int getUserId() {
+    public String getUserId() {
         return userId;
     }
 
-    public void setUserId(int userId) {
+    public void setUserId(String userId) {
         this.userId = userId;
     }
 
