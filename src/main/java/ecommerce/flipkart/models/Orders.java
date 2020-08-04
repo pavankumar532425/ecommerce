@@ -11,7 +11,7 @@ import java.util.Date;
 @IdClass(OrderId.class)
 public class Orders {
     @Id
-    String userId;
+    String userid;
     @Id
     int itemid;
     Date orderplaceddata;
@@ -20,12 +20,12 @@ public class Orders {
     public Orders() {
     }
 
-    public String getUserId() {
-        return userId;
+    public String getUserid() {
+        return userid;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public void setUserid(String userid) {
+        this.userid = userid;
     }
 
     public int getItemid() {

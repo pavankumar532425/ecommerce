@@ -1,2 +1,3 @@
 insert into users(username,email,password,phonenumber,address) values ('pavan kumar','pavankumar532425@gmail.com','532425143','7989816992','jsadoinfdngkvdfgblfdgkdflgnlfdngldfnl')
 insert into items(id,itemname,itemdescription,itemprices,itemavailability,numberofitemsavailable,Itemrating) values(1,'iphone','this is item ',20000,TRUE,10,4.3)
+insert into Comments(userid,itemid,comment,rating)values('pavankumar532425@gmail.com',1,'good product',4.0)

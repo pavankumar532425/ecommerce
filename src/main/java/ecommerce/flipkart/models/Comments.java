@@ -10,17 +10,26 @@ import javax.persistence.Table;
 @IdClass(OrderId.class)
 public class Comments {
     @Id
-    String userId;
+    String userid;
     @Id
     int itemid;
     String comment;
+    double rating;
 
-    public String getUserId() {
-        return userId;
+    public double getRating() {
+        return rating;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public void setRating(double rating) {
+        this.rating = rating;
+    }
+
+    public String getUserid() {
+        return userid;
+    }
+
+    public void setUserid(String userid) {
+        this.userid = userid;
     }
 
     public int getItemid() {
