@@ -17,8 +17,8 @@ public class OrdersController {
     public List<Items> getUserOrders(@PathVariable String userid){
          return ordersService.getUserOrders(userid);
     }
-    @RequestMapping(value = "/placeorder/",method = RequestMethod.POST)
-    public Responsemsg placeorder(@RequestBody Orders orders){
-        return ordersService.placeOrder(orders);
+    @RequestMapping(value = "/placeorder/{user_id}/{item_id}/{q}",method = RequestMethod.GET)
+    public Responsemsg placeorder(@PathVariable String user_id,@PathVariable int item_id,@PathVariable int q){
+        return ordersService.placeOrder(user_id,item_id,q);
     }
 }

@@ -15,9 +15,18 @@ public class Orders {
     @Id
     int itemid;
     Date orderplaceddata;
+    int quntity;
     String orderstatus;
 
     public Orders() {
+    }
+
+    public int getQuntity() {
+        return quntity;
+    }
+
+    public void setQuntity(int quntity) {
+        this.quntity = quntity;
     }
 
     public String getUserid() {
