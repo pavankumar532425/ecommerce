@@ -16,13 +16,13 @@ public class Items {
     double itemprices;
     boolean itemavailability;
     int numberofitemsavailable;
-    int Itemrating;
+    double Itemrating;
 
-    public int getItemrating() {
+    public double getItemrating() {
         return Itemrating;
     }
 
-    public void setItemrating(int itemrating) {
+    public void setItemrating(double itemrating) {
         Itemrating = itemrating;
     }
 
