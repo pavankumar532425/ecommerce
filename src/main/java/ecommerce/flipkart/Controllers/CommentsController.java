@@ -2,6 +2,7 @@ package ecommerce.flipkart.Controllers;
 
 import ecommerce.flipkart.Services.CommentsService;
 import ecommerce.flipkart.models.Comments;
+import ecommerce.flipkart.pojos.Commentspojo;
 import ecommerce.flipkart.pojos.Responsemsg;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -16,8 +17,8 @@ public class CommentsController {
     public Responsemsg addComment(@RequestBody Comments comments){
         return commentsService.addComment(comments);
     }
-    @RequestMapping(value = "/getcommets",method = RequestMethod.GET)
-    public List<Comments> getAllComments(){
-        return commentsService.getAllCommet();
+    @RequestMapping(value = "/getitemcommets/{id}",method = RequestMethod.GET)
+    public List<Commentspojo> getitemsCommet(@PathVariable int id){
+        return commentsService.getitemsCommet(id);
     }
 }
