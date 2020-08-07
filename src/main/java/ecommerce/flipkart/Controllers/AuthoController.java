@@ -19,4 +19,5 @@ public class AuthoController {
     public Responsemsg singin(@PathVariable String email,@PathVariable String password){
         return authoservice.signin(email,password);
     }
+
 }
