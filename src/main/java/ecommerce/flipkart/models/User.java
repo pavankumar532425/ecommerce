@@ -13,6 +13,9 @@ public class User {
     boolean active;
     String roles;
 
+    public User() {
+    }
+
     public int getId() {
         return id;
     }

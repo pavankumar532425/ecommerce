@@ -1,9 +1,11 @@
 package ecommerce.flipkart.Services;
 
 
+import ecommerce.flipkart.models.User;
 import ecommerce.flipkart.models.UsersDetails;
 import ecommerce.flipkart.pojos.Responsemsg;
 import ecommerce.flipkart.repositories.UsersDetailsRepo;
+import ecommerce.flipkart.repositories.userRepo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +20,8 @@ public class Authoservice {
     UsersDetailsRepo usersDetailsRepo;
     @Autowired
     Responsemsg responsemsg;
+    @Autowired
+    userRepo userRepo;
     Logger logger= LoggerFactory.getLogger(Authoservice.class);
     public Responsemsg signup(UsersDetails user){
        List<UsersDetails>ls= usersDetailsRepo.findByEmail(user.getEmail());
@@ -28,6 +32,12 @@ public class Authoservice {
         }
         else {
         usersDetailsRepo.save(user);
+        User user1=new User();
+        user1.setActive(true);
+        user1.setPassword(user.getPassword());
+        user1.setRoles("ROLE_USER");
+        user1.setUsername(user.getEmail());
+        userRepo.save(user1);
             responsemsg.setResponse("email already exits");
             responsemsg.setStatus(HttpStatus.OK);
         logger.info("A new user signup");
