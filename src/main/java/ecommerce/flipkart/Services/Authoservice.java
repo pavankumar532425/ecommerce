@@ -1,9 +1,9 @@
 package ecommerce.flipkart.Services;
 
 
-import ecommerce.flipkart.models.Users;
+import ecommerce.flipkart.models.UsersDetails;
 import ecommerce.flipkart.pojos.Responsemsg;
-import ecommerce.flipkart.repositories.UsersRepo;
+import ecommerce.flipkart.repositories.UsersDetailsRepo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,19 +15,19 @@ import java.util.List;
 @Service
 public class Authoservice {
     @Autowired
-    UsersRepo usersRepo;
+    UsersDetailsRepo usersDetailsRepo;
     @Autowired
     Responsemsg responsemsg;
     Logger logger= LoggerFactory.getLogger(Authoservice.class);
-    public Responsemsg signup(Users user){
-       List<Users>ls= usersRepo.findByEmail(user.getEmail());
+    public Responsemsg signup(UsersDetails user){
+       List<UsersDetails>ls= usersDetailsRepo.findByEmail(user.getEmail());
         if(!ls.isEmpty()){
             responsemsg.setResponse("email already exits");
             responsemsg.setStatus(HttpStatus.CONFLICT);
             logger.info("A user email already exits");
         }
         else {
-        usersRepo.save(user);
+        usersDetailsRepo.save(user);
             responsemsg.setResponse("email already exits");
             responsemsg.setStatus(HttpStatus.OK);
         logger.info("A new user signup");
@@ -36,7 +36,7 @@ public class Authoservice {
 
     }
     public Responsemsg signin(String email,String password){
-        List<Users>ls= usersRepo.findByEmail(email);
+        List<UsersDetails>ls= usersDetailsRepo.findByEmail(email);
         if(ls.isEmpty()){
             responsemsg.setResponse("incorrect mail");
             responsemsg.setStatus(HttpStatus.CONFLICT);

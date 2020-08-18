@@ -6,8 +6,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Users")
-public class Users {
+@Table(name = "UsersDetails")
+public class UsersDetails {
     @Id
     String email;
     String username;
@@ -15,7 +15,7 @@ public class Users {
     String phonenumber;
     String address;
 
-    public Users() {
+    public UsersDetails() {
     }
 
     public String getUsername() {

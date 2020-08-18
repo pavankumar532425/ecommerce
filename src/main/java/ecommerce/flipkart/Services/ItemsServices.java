@@ -1,7 +1,6 @@
 package ecommerce.flipkart.Services;
 
 import ecommerce.flipkart.models.Items;
-import ecommerce.flipkart.models.Users;
 import ecommerce.flipkart.repositories.ItemsRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
